@@ -1,0 +1,12 @@
+{{ form.open({ action: 'UsersController.auth' }) }}
+    {{ csrfField }}
+
+    {{ form.label('username', 'Username') }}
+    {{ form.text('username') }}
+
+    {{ form.label('password', 'Password') }}
+    {{ form.password('password') }}
+
+    {{ form.submit('Login', 'login') }}
+
+{{ form.close() }}

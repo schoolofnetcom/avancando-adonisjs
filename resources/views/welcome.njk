@@ -1,0 +1,17 @@
+{% extends 'master' %}
+
+{% block content %}
+  <div class="__banner">
+    <div class="banner__inner">
+      <img src="/assets/logo.svg">
+      {% if currentUser %}
+          <h2>Welcome {{ currentUser.username }} </h2>
+        {{ linkToAction('UsersController.logout', 'Logout') }}
+      {% endif %}
+
+      {% if not currentUser %}
+            <h2>Practical <span>Reliable</span> Productive</h2>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

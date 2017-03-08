@@ -1,0 +1,15 @@
+{{ form.open({ action: 'UsersController.store' }) }}
+    {{ csrfField }}
+
+    {{ form.label('username', 'Username') }}
+    {{ form.text('username') }}
+
+    {{ form.label('email', 'Email') }}
+    {{ form.email('email') }}
+
+    {{ form.label('password', 'Password') }}
+    {{ form.password('password') }}
+
+    {{ form.submit('Create', 'create') }}
+
+{{ form.close() }}
